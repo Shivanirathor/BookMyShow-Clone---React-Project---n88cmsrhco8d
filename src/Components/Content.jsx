@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import axios from "axios";
-import { getMovieList } from "../Redux/MovieSlice";
+import { getMovieList } from "../Redux/movieSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const Content = () => {

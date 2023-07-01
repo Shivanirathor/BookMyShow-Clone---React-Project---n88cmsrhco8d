@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import React, { useEffect, useState } from "react";
-import {  getGenresList, setGenresId } from "../Redux/MovieSlice";
+import {  getGenresList, setGenresId } from "../Redux/movieSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const Genres = () => {
