@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ".//Home/Home.css";
-import {  getMovieSearch } from "../Redux/MovieSlice";
+import {  getMovieSearch } from "../Redux/movieSlice";
 import { useDispatch } from "react-redux";
 const Search = () => {
   const dispatch = useDispatch();
