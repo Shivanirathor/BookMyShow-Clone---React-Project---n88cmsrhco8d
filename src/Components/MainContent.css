@@ -1,0 +1,80 @@
+body{
+        margin: 0;
+        padding: 0;
+        /* background-color:antiquewhite ;   */
+        /* background-color:rgb(141, 151, 170); */
+        
+        background-image: linear-gradient(180deg, rgb(62, 64, 75), rgb(165, 169, 178));
+}
+.header{
+        background-color: "rgb(51, 53, 69)";
+        display: "flex";
+        justify-content: "space-between";
+}
+.genresClr{
+        background-color:rgb(31, 37, 51);
+      color: white;
+}
+
+.genresText:hover{
+        transform: scale(1.50);
+        cursor: pointer;
+        color: rgb(227, 44, 44);
+        /* background: red; */
+      
+}
+.modalCards{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        
+        padding: 10px;
+        /* background-color: rgb(188, 34, 131); */
+        background: linear-gradient(180deg,  rgb(45, 127, 131), rgb(239, 88, 88));
+        /* box-shadow: 4px 4px 4px rgb(250, 250, 250); */
+}
+.modalText{
+        font-weight: "bold";
+       text-align: center;
+        font-size: 15px;
+        margin-left: 30px;
+}
+.modalText button{
+        color: white;
+        background: rgb(45, 127, 131);
+       margin: 5px;
+}
+
+.modalCards:hover{
+        background: linear-gradient(180deg, rgb(227, 44, 44), rgb(20, 91, 95));
+        box-shadow:  0 0 10px 5px #fff;
+}
+.modalText button:hover{
+background: rgb(227, 44, 44);
+transform: scale(1.08);
+}
+.cards{
+        color: black;
+        margin: 20px;
+        background: rgb(249, 244, 244);
+        margin-top: 20px;
+        border-radius: 20px;
+        /* box-shadow: 5px 5px 4px  red; */
+      /* padding: 10px 0px; */
+}
+
+.cards img{
+       margin-bottom: 15px;
+        
+        border-radius: 10px;
+        
+}
+.cards img:hover{
+        box-shadow: 1px 1px 4px 5px  red;
+        transform: scale(1.08) ;
+}
+.tags1{
+        font-size: 30px;
+        /* color:rgb(31, 37, 51); */
+        font-weight:600;
+}

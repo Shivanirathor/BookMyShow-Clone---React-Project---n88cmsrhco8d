@@ -1,0 +1,18 @@
+import React from "react";
+import ".//Home/Home.css";
+import favouriteImg from "./favourite.png"
+
+const Favourite = () => {
+  return (
+    <div className="favourite">
+      <img
+        src={favouriteImg}
+        alt="img"
+        width={"45px"}
+        height={"45px"}
+      />
+    </div>
+  );
+};
+
+export default Favourite;

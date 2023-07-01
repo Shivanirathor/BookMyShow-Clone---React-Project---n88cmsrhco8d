@@ -1,0 +1,34 @@
+.imageIcon img{
+    margin-top: -60px;
+    margin-bottom: -80px;
+    width: 300px;
+    height: 200px;
+
+}
+.search{
+         display: "flex";
+        justify-content: "space-evenly"; 
+}
+.search input{
+    font-size: 20px;
+    width: 600px;
+    margin-top: 20px;
+    height: 35px;
+    margin: 20px;
+    border-radius: 5px;
+   margin-bottom: 20px;
+   margin-left: -40px;
+}
+.favourite{
+   
+    margin-top: 20px;
+}
+.favourite:hover{
+    box-shadow: 0 0 6px 3px white;
+}
+
+.login img{
+    margin-top: 20px; 
+    margin-left: 20px;
+    margin-bottom: -7px;
+}

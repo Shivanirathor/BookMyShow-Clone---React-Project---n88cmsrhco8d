@@ -1,0 +1,148 @@
+.theater-screen > img {
+    width: 70%;
+    height: 3rem;
+    margin: 2rem 0;
+}
+
+.theater-screen {
+    display: flex;
+    justify-content: center;
+}
+
+.Booking-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.border-class > input {
+    height: 2rem;
+    width: 10rem;
+    outline: none;
+    border: none;
+}
+
+.select-theater {
+    height: 2rem;
+    width: 10rem;
+    /* padding: 0 20px; */
+    border: none;
+    outline: none;
+}
+
+.border-class {
+    border-bottom: 1px solid black;
+}
+
+.heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.btn-seat {
+    cursor: pointer;
+    margin: 30px;
+    width: 6rem;
+    height: 2rem;
+    background-color: rgb(233, 35, 68);
+    border: none;
+    border-radius: 15px;
+}
+
+.btn-seat:hover {
+    cursor: pointer;
+    margin: 30px;
+    width: 6rem;
+    height: 2rem;
+    background-color: rgb(233, 35, 68);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 4px gray;
+}
+
+.seat-row {
+    display: flex;
+    margin: 1px;
+}
+
+.seats-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seat {
+    margin: 5px;
+    border: 1px solid black;
+    padding: 2px;
+    font-size: 0.7rem;
+    width: 20px;
+    height: 15px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+}
+
+.seat:hover {
+    margin: 5px;
+    border: 1px solid black;
+    padding: 2px;
+    font-size: 0.7rem;
+    width: 20px;
+    height: 15px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    box-shadow: 0 0 8px 4px lightblue;
+}
+
+.seatSelect-on {
+    background-color: aqua;
+}
+
+.over-ticket {
+    margin: 10px;
+    padding: 10px;
+    width: 10rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+@media only screen and (max-width:768px) {
+    .Booking-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 20px;
+    }
+
+    .border-class {
+        border: none;
+    }
+
+    .select-theater {
+        width: 90%;
+    }
+
+    .border-class > input {
+        width: 90%;;
+    }
+}
+
+@media only screen and (max-width:280px) {
+    .seat {
+        margin: 1px;
+        font-size: 0.5rem;
+        width: 18px;
+        height: 18px;
+    }
+
+    .seat:hover {
+        margin: 1px;
+        font-size: 0.5rem;
+        width: 18px;
+        height: 18px;
+    }
+}
