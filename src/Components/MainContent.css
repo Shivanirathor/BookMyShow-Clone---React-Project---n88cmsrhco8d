@@ -19,15 +19,14 @@ body{
 .genresText:hover{
         transform: scale(1.50);
         cursor: pointer;
-        color: rgb(227, 44, 44);
-        /* background: red; */
+      width: 180px;
+        background-color:rgb(165, 169, 178);
       
 }
 .modalCards{
         display: flex;
         justify-content: center;
         text-align: center;
-        
         padding: 10px;
         /* background-color: rgb(188, 34, 131); */
         background: linear-gradient(180deg,  rgb(45, 127, 131), rgb(239, 88, 88));
@@ -59,8 +58,14 @@ transform: scale(1.08);
         background: rgb(249, 244, 244);
         margin-top: 20px;
         border-radius: 20px;
-        /* box-shadow: 5px 5px 4px  red; */
-      /* padding: 10px 0px; */
+       border:2.5px solid  white;
+}
+.cards:hover{
+        /* background-color: transparent; */
+        transform: scale(1.10) ;
+        /* color: white; */
+        /* background-color: white; */
+        /* box-shadow: 1px 1px 3px 3px white; */
 }
 
 .cards img{
@@ -69,10 +74,10 @@ transform: scale(1.08);
         border-radius: 10px;
         
 }
-.cards img:hover{
-        box-shadow: 1px 1px 4px 5px  red;
-        transform: scale(1.08) ;
-}
+/* .cards img:hover{
+        box-shadow: 1px 1px 2px 5px  rgb(107, 101, 101);
+        transform: scale(1) ;
+} */
 .tags1{
         font-size: 30px;
         /* color:rgb(31, 37, 51); */

@@ -1,17 +1,19 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // import Home from "./Pages/Home/Home";
-import Login from "./Pages/Login";
+
 import Favourite from "./Pages/Favourite";
 import Signup from "./Components/Signup/Signup";
 import Home from "./Components/Home";
 import SignIn from "./Components/Signup/SignIn";
 import Wishlist from "./Components/Wishlist";
 import { TicketBooking } from "./Components/Ticket-booking/TicketBooking";
+import CheckOut from "./Components/Checkout/Checkout";
+
+// import { CheckOut } from "./Components/Checkout/Checkout";
+
+// import Summary from "./Components/Checkout/Summary";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "wishlist",
     element: <Wishlist />,
+  },
+  {
+    path: "checkout",
+    element: <CheckOut />,
   },
 ]);
 

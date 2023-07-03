@@ -3,7 +3,6 @@ import "./MainContent.css";
 import { Link } from "react-router-dom";
 
 const ModalContent = ({
-  handleClose,
   title,
   language,
   rating,
@@ -23,9 +22,9 @@ const ModalContent = ({
         <div>Rating:- ⭐{rating} / 10</div>
         <div>Overview:- {overview}</div>
         <div>Release date:-{releasedate}</div>
-        {/* <button onClick={handleClose}>Close Modal</button> */}
+
         <Link to="ticketBooking">
-          <button>Book Tickets</button>
+          <button >Book Tickets</button>
         </Link>
         <Link to="wishlist">
           <button>Wishlist</button>

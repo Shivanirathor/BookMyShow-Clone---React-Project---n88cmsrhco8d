@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./TicketBooking.css";
 
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 // import { Overlay } from "../../OverLay/Overlay";
 
 export function TheaterSeats(props) {
@@ -81,11 +81,10 @@ export function TheaterSeats(props) {
         <div className="seat-row">{seatsSection(props.Seats, 7)}</div>
         <div className="seat-row">{seatsSection(props.Seats, 8)}</div>
         <div className="seat-row">{seatsSection(props.Seats, 9)}</div>
-        {/* <NavLink to="/checkout"> */}
+
         <button className="btn-seat" onClick={submitSeatSelected}>
           Submit
         </button>
-        {/* </NavLink> */}
       </div>
       {/* {flag && (
         <Overlay functionCall={overlayFlagCheck}>

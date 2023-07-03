@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { TheaterScreen } from "./TheaterScreen";
 import { TheaterSeats } from "./TheaterSeats";
 import "./TicketBooking.css";
+import Payment from "../Checkout/Payment";
 
 const theaterName = ["PVR Cinema", "Metro INOX Cinema", "Cinepolis"];
 const showTime = ["10:15", "12:45", "3:15", "5:45"];
@@ -56,8 +57,9 @@ export function TicketBooking() {
             BookingDate={date}
             Seats={theaterSeats}
             movieName={"heyy"}
-            // movieName={props.BookingData.stateUp.detils.title}
+            // movieName={props.dateOfBooking}
           />
+         
         </div>
       </div>
     </div>

@@ -25,7 +25,7 @@ const Card = ({ imgUrl, title, language, rating , overview, releasedate}) => {
   const [openModal, setOpenModal] = useState(false);
   const handleOpen = () => setOpenModal(true);
   // const handleClose = () => setOpenModal(false);
-  // console.log("openmodel", openModal);
+  // console.log("title", title);
   return (
     <div className="cards" onClick={handleOpen} >
       <img src={imgUrl} alt="img" width={280} height={350} />
@@ -36,7 +36,7 @@ const Card = ({ imgUrl, title, language, rating , overview, releasedate}) => {
       <Modal open={openModal} onClose={() => setOpenModal(false)}>
         <Box sx={style}>
           <ModalContent
-            // handleClose={() => setOpenModal(false)}
+          
             imgUrl={imgUrl}
             title={title}
             language={language}
@@ -45,6 +45,7 @@ const Card = ({ imgUrl, title, language, rating , overview, releasedate}) => {
             releasedate={releasedate}
             
           />
+       
         </Box>
       </Modal>
     </div>

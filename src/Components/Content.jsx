@@ -33,15 +33,14 @@ const Content = () => {
   // console.log("movislist", movieList);
   // console.log("firstgenresId", genresId);
   return (
-    <div >
-      <h2 style={{color:"white", fontSize:40, margin:8}}>Now Playing</h2>
+    <div>
+      <h2 style={{ color: "white", fontSize: 40, margin: 8 }}>Now Playing</h2>
       <div
         style={{
-          cursor:"pointer",
+          cursor: "pointer",
           color: "white",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
-          
         }}
       >
         {movieList
@@ -55,7 +54,6 @@ const Content = () => {
                   imgUrl={
                     "https://image.tmdb.org/t/p/original" + data.poster_path
                   }
-
                   title={data.original_title}
                   language={data.original_language}
                   rating={data.vote_average}
