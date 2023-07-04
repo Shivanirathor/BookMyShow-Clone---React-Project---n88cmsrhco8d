@@ -36,7 +36,7 @@ const Card = ({ imgUrl, title, language, rating , overview, releasedate}) => {
       <Modal open={openModal} onClose={() => setOpenModal(false)}>
         <Box sx={style}>
           <ModalContent
-          
+          setOpenModal={setOpenModal}
             imgUrl={imgUrl}
             title={title}
             language={language}

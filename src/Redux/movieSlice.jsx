@@ -52,6 +52,7 @@ const initialState = {
   movieList: [],
   genresType: [],
   genresId: 28,
+  selectedMovieName: "",
 };
 
 export const movieSlice = createSlice({
@@ -64,6 +65,10 @@ export const movieSlice = createSlice({
     setGenresId: (state, { payload }) => {
       state.genresId = payload;
     },
+    setSelectedMovieName: (state, {payload}) =>{
+      state.selectedMovieName = payload;
+    }
+
   },
   extraReducers: {
     [getMovieList.fulfilled]: (state, { payload }) => {
@@ -79,6 +84,6 @@ export const movieSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { setMovieList, setGenresId } = movieSlice.actions;
+export const { setMovieList, setGenresId , setSelectedMovieName} = movieSlice.actions;
 
 export default movieSlice.reducer;

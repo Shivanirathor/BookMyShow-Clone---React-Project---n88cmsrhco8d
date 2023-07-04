@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import React, { useEffect, useState } from "react";
-import {  getGenresList, setGenresId } from "../Redux/movieSlice";
+import { getGenresList, setGenresId } from "../Redux/movieSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const Genres = () => {
@@ -27,6 +27,7 @@ const Genres = () => {
   //       console.error("Error fetching data:", error);
   //     });
   // }, []);
+
   useEffect(() => {
     dispatch(getGenresList());
   }, []);
@@ -36,11 +37,15 @@ const Genres = () => {
   // };
 
   return (
-    <div >
+    <div>
       <h2>Genres </h2>
       {genresType.map((data) => {
         return (
-          <p className="genresText" key={data.id} onClick={() => dispatch(setGenresId(data.id))}>
+          <p
+            className="genresText"
+            key={data.id}
+            onClick={() => dispatch(setGenresId(data.id))}
+          >
             {data.name}{" "}
           </p>
         );

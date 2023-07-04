@@ -69,14 +69,15 @@
     width: 150px;
    
     background-color: rgb(19, 135, 236);
-    height: 2rem;
+    height: 2.5rem;
     border: 1px solid rgb(19, 135, 236);
-    border-radius: 5px;
+    border-radius: 10px;
     color: white;
     font-weight: 500;
 }
 
 .checkout-btn:hover {
+    height: 3rem;
     font-weight: 500;
     box-shadow: 0 0 8px 4px white;
 }

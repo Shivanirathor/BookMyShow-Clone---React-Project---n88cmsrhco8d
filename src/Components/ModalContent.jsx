@@ -1,8 +1,11 @@
 import React from "react";
 import "./MainContent.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setSelectedMovieName } from "../Redux/movieSlice";
 
 const ModalContent = ({
+  setOpenModal,
   title,
   language,
   rating,
@@ -10,6 +13,18 @@ const ModalContent = ({
   overview,
   releasedate,
 }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const onHandleClose = () => {
+    // setOpenModal(false);
+    // navigate("/home");
+    location.reload();
+  };
+
+  const handleTicketBooking = () => {
+    dispatch(setSelectedMovieName(title));
+    navigate("/ticketbooking");
+  };
   return (
     <div className="modalCards">
       <div>
@@ -23,12 +38,13 @@ const ModalContent = ({
         <div>Overview:- {overview}</div>
         <div>Release date:-{releasedate}</div>
 
-        <Link to="ticketBooking">
-          <button >Book Tickets</button>
-        </Link>
-        <Link to="wishlist">
+        <button onClick={onHandleClose}>Close</button>
+        <div onClick={handleTicketBooking}>
+          <button>Book Tickets</button>
+        </div>
+        <div onClick={() => navigate("/wishlist")}>
           <button>Wishlist</button>
-        </Link>
+        </div>
       </div>
     </div>
   );

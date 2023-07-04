@@ -58,7 +58,8 @@ transform: scale(1.08);
         background: rgb(249, 244, 244);
         margin-top: 20px;
         border-radius: 20px;
-       border:2.5px solid  white;
+          box-shadow: 1px 1px 5px 3px rgb(31, 37, 51)
+       /* border:2.5px solid  rgb(134, 132, 132); */
 }
 .cards:hover{
         /* background-color: transparent; */

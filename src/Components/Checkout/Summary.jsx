@@ -1,15 +1,17 @@
 import React from "react";
 import "./CheckOut.css";
+import { useSelector } from "react-redux";
 
 function Summary(props) {
-  const totalTicketPrice = 
+  const { selectedMovieName } = useSelector((state) => state.movie);
+  const totalTicketPrice =
     Number(props.BookingDetails.price) * Number(props.BookingDetails.noSeats);
-  const tax =  (totalTicketPrice * 0.0175).toFixed(2);
+  const tax = (totalTicketPrice * 0.0175).toFixed(2);
   return (
     <div className="summary">
       <div className="wraper-div">
         <h2>Summary</h2>
-        <h4>{props.BookingDetails.name}</h4>
+        <h4>{selectedMovieName}</h4>
         <div className="eachTicket">
           <span>Classic Ticket</span>
           <span>&#8377; {props.BookingDetails.price}</span>

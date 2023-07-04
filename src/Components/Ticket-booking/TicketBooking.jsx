@@ -4,6 +4,7 @@ import { TheaterScreen } from "./TheaterScreen";
 import { TheaterSeats } from "./TheaterSeats";
 import "./TicketBooking.css";
 import Payment from "../Checkout/Payment";
+import { useSelector } from "react-redux";
 
 const theaterName = ["PVR Cinema", "Metro INOX Cinema", "Cinepolis"];
 const showTime = ["10:15", "12:45", "3:15", "5:45"];
@@ -11,6 +12,7 @@ const theaterSeats = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 export function TicketBooking() {
   const [date, setDate] = useState(null);
+  const { selectedMovieName } = useSelector((state) => state.movie);
 
   const options = (arr, name) => {
     return arr.map((item, index) => {
@@ -32,7 +34,7 @@ export function TicketBooking() {
       <p>
         <span className="heading">Movie: </span>
 
-        <p> fasttackh1</p>
+        <p> {selectedMovieName}</p>
       </p>
 
       <div className="Booking-nav">
@@ -53,13 +55,7 @@ export function TicketBooking() {
       <div className="ticket">
         <TheaterScreen />
         <div className="seats-section">
-          <TheaterSeats
-            BookingDate={date}
-            Seats={theaterSeats}
-            movieName={"heyy"}
-            // movieName={props.dateOfBooking}
-          />
-         
+          <TheaterSeats BookingDate={date} Seats={theaterSeats} />
         </div>
       </div>
     </div>

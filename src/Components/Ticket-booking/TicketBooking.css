@@ -47,24 +47,26 @@ height: 100vh;
     display: flex;
     justify-content: center;
    align-items: center;
+   color: white;
     cursor: pointer;
     margin: 30px;
-    width: 6rem;
-    height: 2rem;
-    background-color: rgb(19, 135, 236);
+    width: 7rem;
+    height: 3rem;
+    background-color: rgb(227, 44, 44);;
     border: none;
     border-radius: 15px;
 }
 
 .btn-seat:hover {
+    
     cursor: pointer;
     margin: 30px;
-    width: 6rem;
-    height: 2rem;
-    background-color: rgb(233, 35, 68);
+    width: 7rem;
+    height: 3.2rem;
+    background-color: rgb(75, 174, 207);
     border: none;
     border-radius: 15px;
-    box-shadow: 0 0 8px 4px gray;
+    box-shadow: 0 0 8px 4px rgb(255, 255, 255);
 }
 
 .seat-row {
