@@ -10,6 +10,7 @@ import SignIn from "./Components/Signup/SignIn";
 import Wishlist from "./Components/Wishlist";
 import { TicketBooking } from "./Components/Ticket-booking/TicketBooking";
 import CheckOut from "./Components/Checkout/Checkout";
+import { createContext, useContext, useState } from "react";
 
 // import { CheckOut } from "./Components/Checkout/Checkout";
 
@@ -53,11 +54,15 @@ const router = createBrowserRouter([
     element: <CheckOut />,
   },
 ]);
-
+ export const wishListContext = createContext();
 function App() {
+ 
+  const [wishListContextValue, setWishListContextValue] = useState([]);
   return (
     <>
-      <RouterProvider router={router} />
+      <wishListContext.Provider value={{wishListContextValue, setWishListContextValue}}>
+        <RouterProvider router={router} />
+      </wishListContext.Provider>
     </>
   );
 }

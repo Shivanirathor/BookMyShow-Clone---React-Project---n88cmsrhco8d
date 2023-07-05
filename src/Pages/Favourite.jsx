@@ -1,19 +1,15 @@
 import React from "react";
 import ".//Home/Home.css";
-import favouriteImg from "./favourite.png"
+import favouriteImg from "./favourite.png";
+import { useNavigate } from "react-router-dom";
 
 const Favourite = () => {
+  const navigate = useNavigate();
   return (
     <div className="favourite">
-      {/* <Link to="payment"> */}
-      <img
-        src={favouriteImg}
-        alt="img"
-        width={"45px"}
-        height={"45px"}
-      />
-      {/* </Link> */}
-   
+      <div onClick={() => navigate("/wishlist")}>
+        <img src={favouriteImg} alt="img" width={"45px"} height={"45px"} />
+      </div>
     </div>
   );
 };

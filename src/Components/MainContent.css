@@ -84,3 +84,15 @@ transform: scale(1.08);
         /* color:rgb(31, 37, 51); */
         font-weight:600;
 }
+/* .wishlistCss{
+        position: "absolute";
+       width: 30%;
+       height: 50%;
+       display: flex;
+      flex-direction: column-reverse;
+       justify-content: space-between;
+       align-items: center
+       display: "grid";
+         grid-template-columns: "repeat(auto-fit, minmax(400px, 1fr))";
+    
+} */

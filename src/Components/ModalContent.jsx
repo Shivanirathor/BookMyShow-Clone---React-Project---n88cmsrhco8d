@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./MainContent.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setSelectedMovieName } from "../Redux/movieSlice";
+import { wishListContext } from "../App";
 
 const ModalContent = ({
   setOpenModal,
@@ -20,11 +21,36 @@ const ModalContent = ({
     // navigate("/home");
     location.reload();
   };
+  const { wishListContextValue, setWishListContextValue } =
+    useContext(wishListContext);
+
+  const handleWishlist = ({
+    imgUrl,
+    title,
+    language,
+    rating,
+    overview,
+    releasedate,
+  }) => {
+    const item = {
+      imgUrl,
+
+      title,
+      language,
+      rating,
+      overview,
+      releasedate,
+    };
+    setWishListContextValue([...wishListContextValue, item]);
+    navigate("/wishlist");
+    // console.log(wishListContextValue);
+  };
 
   const handleTicketBooking = () => {
     dispatch(setSelectedMovieName(title));
     navigate("/ticketbooking");
   };
+
   return (
     <div className="modalCards">
       <div>
@@ -42,7 +68,18 @@ const ModalContent = ({
         <div onClick={handleTicketBooking}>
           <button>Book Tickets</button>
         </div>
-        <div onClick={() => navigate("/wishlist")}>
+        <div
+          onClick={() => {
+            handleWishlist({
+              imgUrl,
+              title,
+              language,
+              rating,
+              overview,
+              releasedate,
+            });
+          }}
+        >
           <button>Wishlist</button>
         </div>
       </div>
