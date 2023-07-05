@@ -9,12 +9,10 @@ import Home from "./Components/Home";
 import SignIn from "./Components/Signup/SignIn";
 import Wishlist from "./Components/Wishlist";
 import { TicketBooking } from "./Components/Ticket-booking/TicketBooking";
-import CheckOut from "./Components/Checkout/Checkout";
+// import CheckOut from "./Components/Checkout/Checkout";
 import { createContext, useContext, useState } from "react";
+import CheckOut from "./Components/Checkout/Checkout";
 
-// import { CheckOut } from "./Components/Checkout/Checkout";
-
-// import Summary from "./Components/Checkout/Summary";
 
 const router = createBrowserRouter([
   {
@@ -51,7 +49,7 @@ const router = createBrowserRouter([
   },
   {
     path: "checkout",
-    element: <CheckOut />,
+    element: <CheckOut/>
   },
 ]);
  export const wishListContext = createContext();
