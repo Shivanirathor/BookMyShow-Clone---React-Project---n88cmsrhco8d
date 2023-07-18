@@ -1,8 +1,7 @@
-import React, { useContext, useState } from "react";
-import "./TicketBooking.css";
+import React, {useState } from "react";
+import '../Style/TicketBooking.css';
 
-import { Link, NavLink, useNavigate } from "react-router-dom";
-// import { Overlay } from "../../OverLay/Overlay";
+import {useNavigate } from "react-router-dom";
 
 export function TheaterSeats(props) {
   const navigate = useNavigate();

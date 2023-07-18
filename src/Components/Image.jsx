@@ -1,6 +1,6 @@
 import React from "react";
-import image from "./bookmyshow.png";
-import ".//Home/Home.css";
+import image from "../assets/bookmyshow.png";
+import "../Style/Home.css";
 
 const Image = () => {
   return (

@@ -1,18 +1,13 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-// import Home from "./Pages/Home/Home";
-
 import Favourite from "./Pages/Favourite";
-import Signup from "./Components/Signup/Signup";
-import Home from "./Components/Home";
-import SignIn from "./Components/Signup/SignIn";
-import Wishlist from "./Components/Wishlist";
-import { TicketBooking } from "./Components/Ticket-booking/TicketBooking";
-// import CheckOut from "./Components/Checkout/Checkout";
+import Signup from "./Pages/Signup";
+import SignIn from "./Pages/SignIn";
+import Wishlist from "./Pages/Wishlist";
+import { TicketBooking } from "./Pages/TicketBooking";
 import { createContext, useContext, useState } from "react";
-import CheckOut from "./Components/Checkout/Checkout";
-
+import CheckOut from "./Pages/CheckOut";
+import Home from "./Pages/Home";
 
 const router = createBrowserRouter([
   {
@@ -23,10 +18,6 @@ const router = createBrowserRouter([
     path: "home",
     element: <Home />,
   },
-  // {
-  //   path: "login",
-  //   element: <Login />,
-  // },
   {
     path: "favourite",
     element: <Favourite />,
@@ -49,16 +40,17 @@ const router = createBrowserRouter([
   },
   {
     path: "checkout",
-    element: <CheckOut/>
+    element: <CheckOut />,
   },
 ]);
- export const wishListContext = createContext();
+export const wishListContext = createContext();
 function App() {
- 
   const [wishListContextValue, setWishListContextValue] = useState([]);
   return (
     <>
-      <wishListContext.Provider value={{wishListContextValue, setWishListContextValue}}>
+      <wishListContext.Provider
+        value={{ wishListContextValue, setWishListContextValue }}
+      >
         <RouterProvider router={router} />
       </wishListContext.Provider>
     </>

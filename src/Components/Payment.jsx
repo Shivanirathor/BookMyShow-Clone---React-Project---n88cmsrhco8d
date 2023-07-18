@@ -1,5 +1,5 @@
 import React from "react";
-import "./CheckOut.css"
+import "../Style/CheckOut.css";
 
 function Payment() {
   const HandleSubmit = (event) => {
@@ -53,7 +53,6 @@ function Payment() {
           </button>
         </div>
       </form>
-     
     </div>
   );
 }

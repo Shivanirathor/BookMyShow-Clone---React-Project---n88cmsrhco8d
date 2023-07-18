@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./Signup.css";
-import lockImg from "./lock.png";
-import Home from "../Home";
+import { useNavigate } from "react-router-dom";
+import "../Style/Signup.css";
+import lockImg from "../assets/lock.png";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -11,6 +10,9 @@ const Signup = () => {
   const [password, setPassword] = useState("");
 
   const handleRegisterUser = () => {
+    if (name.length === 0 && email.length === 0 && password === 0) {
+      alert("fill name");
+    }
     navigate("/login");
     localStorage.setItem("loggedIn", true);
     localStorage.setItem("name", name);
@@ -37,18 +39,21 @@ const Signup = () => {
           value={name}
           placeholder="Name"
           onChange={changedName}
+          required
         />
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={changedEmail}
+          required
         />
         <input
           type="Password"
           placeholder="Password"
           value={password}
           onChange={changedPassword}
+          required
         />
 
         <button onClick={handleRegisterUser}>Register</button>

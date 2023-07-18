@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-// import { Overlay } from "../../OverLay/Overlay";
-import { TheaterScreen } from "./TheaterScreen";
-import { TheaterSeats } from "./TheaterSeats";
-import "./TicketBooking.css";
-import Payment from "../Checkout/Payment";
+import { TheaterScreen } from "../Components/TheaterScreen";
+import { TheaterSeats } from "../Components/TheaterSeats";
+import '../Style/TicketBooking.css';
 import { useSelector } from "react-redux";
 
 const theaterName = ["PVR Cinema", "Metro INOX Cinema", "Cinepolis"];

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./MainContent.css";
+import "../Style/MainContent.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setSelectedMovieName } from "../Redux/movieSlice";

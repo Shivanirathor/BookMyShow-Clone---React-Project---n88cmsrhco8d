@@ -1,15 +1,16 @@
 import React from "react";
-
-import Summary from "./Summary";
-import { NavLink, useNavigate } from "react-router-dom";
-import Payment from "./Payment";
+import Summary from "../Components/Summary";
+import { useNavigate } from "react-router-dom";
+import Payment from "../Components/Payment";
+import Header from "../Components/Header";
 
 function CheckOut() {
   const ticketDetails = JSON.parse(localStorage.getItem("BookingDetails"));
   const navigate = useNavigate();
-  console.log("ticketsdetails", ticketDetails);
+  // console.log("ticketsdetails", ticketDetails);
   return (
     <div className="check-out">
+      <Header hideSearch/>
       <button
         onClick={() => {
           navigate(-1);

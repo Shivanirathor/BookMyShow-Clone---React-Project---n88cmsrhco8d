@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import userImg from "./user.png";
-import ".//Home/Home.css";
+import userImg from "../assets/user.png";
+import "../Style/Home.css";
 
 const Login = () => {
   const usename = localStorage.getItem("name") || " ";

@@ -1,5 +1,5 @@
 import React from "react";
-import "./CheckOut.css";
+import "../Style/CheckOut.css";
 import { useSelector } from "react-redux";
 
 function Summary(props) {

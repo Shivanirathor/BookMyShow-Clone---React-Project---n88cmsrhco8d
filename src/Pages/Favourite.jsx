@@ -1,6 +1,6 @@
 import React from "react";
-import ".//Home/Home.css";
-import favouriteImg from "./favourite.png";
+import "../Style/Home.css";
+import favouriteImg from "../assets/favourite.png";
 import { useNavigate } from "react-router-dom";
 
 const Favourite = () => {
