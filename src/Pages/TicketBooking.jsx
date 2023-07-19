@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { TheaterScreen } from "../Components/TheaterScreen";
 import { TheaterSeats } from "../Components/TheaterSeats";
-import '../Style/TicketBooking.css';
+import "../Style/TicketBooking.css";
 import { useSelector } from "react-redux";
+import Header from "../Components/Header";
 
 const theaterName = ["PVR Cinema", "Metro INOX Cinema", "Cinepolis"];
 const showTime = ["10:15", "12:45", "3:15", "5:45"];
@@ -28,6 +29,7 @@ export function TicketBooking() {
 
   return (
     <div className="book">
+      <Header hideSearch />
       <h3>Book Ticket</h3>
       <p>
         <span className="heading">Movie: </span>

@@ -10,7 +10,7 @@
 }
 .book{
     width: 100%;
-height: 100vh;
+   max-height: 100vh;
 }
 
 .Booking-nav {

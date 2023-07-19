@@ -5,20 +5,19 @@ import "../Style/Signup.css";
 const SignIn = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
-
   const [password, setPassword] = useState("");
 
   const handleUser = () => {
+   
     const nameLocalStorage = localStorage.getItem("name");
     const passwordLocalStorage = localStorage.getItem("password");
 
     if (nameLocalStorage === name && passwordLocalStorage === password) {
+      alert("Login successful!");
       navigate("/");
     } else {
       alert("Invalid Credentials");
     }
-    // console.log(nameLocalStorage, passwordLocalStorage, "shivi❤");
-    // console.log(name, password, "formdetail");
   };
 
   const changedName = (event) => {

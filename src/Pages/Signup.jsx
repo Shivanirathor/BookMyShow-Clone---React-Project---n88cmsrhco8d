@@ -8,11 +8,20 @@ const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
 
   const handleRegisterUser = () => {
-    if (name.length === 0 && email.length === 0 && password === 0) {
-      alert("fill name");
+    // Check if the fields are empty
+    if (!name || !email || !password) {
+      alert("Please fill in all the mandatory fields.");
+      return;
     }
+      // Check if email contains "@gmail"
+      if (!email.includes("@gmail")) {
+        setEmailError("Please enter a valid email (e.g., yourname@gmail.com)");
+        return;
+      }
+
     navigate("/login");
     localStorage.setItem("loggedIn", true);
     localStorage.setItem("name", name);
@@ -48,6 +57,7 @@ const Signup = () => {
           onChange={changedEmail}
           required
         />
+            {emailError && <p style={{ color: "red" }}>{emailError}</p>}
         <input
           type="Password"
           placeholder="Password"

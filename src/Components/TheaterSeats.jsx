@@ -6,8 +6,8 @@ import {useNavigate } from "react-router-dom";
 export function TheaterSeats(props) {
   const navigate = useNavigate();
   const price = 250;
-  const [flag, setFlag] = useState(false);
   const [seatState, setSeatState] = useState([]);
+  const [bookingDate, setBookingDate] = useState(null);
 
   let styleSeat = props.Seats.map((item, index, arr) => {
     return arr.map((c, i) => {
@@ -47,10 +47,10 @@ export function TheaterSeats(props) {
   };
 
   const submitSeatSelected = () => {
-    // if (props.BookingDate === null || seatState.length <= 0) {
-    //   setFlag(true);
-    //   return;
-    // }
+    if (!bookingDate || seatState.length === 0) {
+      alert("Please fill in all the details before submitting.");
+      return;
+    }
 
     const ticketDetails = {
       seats: seatState,
@@ -61,10 +61,6 @@ export function TheaterSeats(props) {
     };
     localStorage.setItem("BookingDetails", JSON.stringify(ticketDetails));
     navigate("/checkout");
-  };
-
-  const overlayFlagCheck = () => {
-    setFlag(false);
   };
 
   return (
@@ -81,15 +77,12 @@ export function TheaterSeats(props) {
         <div className="seat-row">{seatsSection(props.Seats, 8)}</div>
         <div className="seat-row">{seatsSection(props.Seats, 9)}</div>
 
+       
         <button className="btn-seat" onClick={submitSeatSelected}>
           Submit
         </button>
       </div>
-      {/* {flag && (
-        <Overlay functionCall={overlayFlagCheck}>
-          <h4 className="over-ticket">Please Fill in all details to Book</h4>
-        </Overlay>
-      )} */}
+     
     </>
   );
 }

@@ -18,12 +18,12 @@ const Header = ({hideSearch}) => {
        {!hideSearch && <div>
           <Search />
         </div> }
-        <div>
+        {!hideSearch && <div>
           <Favourite />
-        </div>
-        <div style={{ marginRight: "20px" }}>
+        </div> }
+        {!hideSearch &&  <div style={{ marginRight: "20px" }}>
           <Login />
-        </div>
+        </div>}
       </div>
     </div>
   );

@@ -14,7 +14,6 @@ const style = {
   transform: "translate(-50%, -50%)",
   minWidth: 100,
   minHeight: 100,
-
   fontSize: 10,
   bgcolor: "background.paper",
   border: "2px solid #000",
@@ -23,8 +22,8 @@ const style = {
 const Card = ({ imgUrl, title, language, rating, overview, releasedate }) => {
   const [openModal, setOpenModal] = useState(false);
   const handleOpen = () => setOpenModal(true);
-  // const handleClose = () => setOpenModal(false);
-  // console.log("title", title);
+  const isUserLoggedIn = true;
+
   return (
     <div className="cards" onClick={handleOpen}>
       <img src={imgUrl} alt="img" width={280} height={350} />
@@ -34,7 +33,7 @@ const Card = ({ imgUrl, title, language, rating, overview, releasedate }) => {
 
       <Modal open={openModal} onClose={() => setOpenModal(false)}>
         <Box sx={style}>
-          <ModalContent
+        {openModal &&   <ModalContent
             setOpenModal={setOpenModal}
             imgUrl={imgUrl}
             title={title}
@@ -42,7 +41,8 @@ const Card = ({ imgUrl, title, language, rating, overview, releasedate }) => {
             rating={rating}
             overview={overview}
             releasedate={releasedate}
-          />
+            isUserLoggedIn={isUserLoggedIn} 
+          /> }
         </Box>
       </Modal>
     </div>
