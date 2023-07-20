@@ -10,7 +10,7 @@
         justify-content: "space-evenly"; 
 }
 .search input{
-    font-size: 20px;
+    font-size: 17px;
     width: 600px;
     margin-top: 20px;
     height: 35px;
@@ -32,3 +32,22 @@
     margin-left: 20px;
     margin-bottom: -7px;
 }
+.user-dropdown {
+    position: relative;
+  }
+  
+  .user-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .user-dropdown-menu.show {
+    display: block;
+  }
+  

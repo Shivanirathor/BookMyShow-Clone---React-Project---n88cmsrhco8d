@@ -7,6 +7,7 @@ const Wishlist = () => {
   return (
     <>
       <div className="wishlistCss">
+
         {wishListContextValue.map((item) => {
           return (
             <div className="modalCards">

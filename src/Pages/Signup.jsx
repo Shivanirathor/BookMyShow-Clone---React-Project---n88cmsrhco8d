@@ -68,7 +68,7 @@ const Signup = () => {
 
         <button onClick={handleRegisterUser}>Register</button>
         <div onClick={() => navigate("/login")}>
-          <p style={{ color: "blue" }}>Already have an account? Sign in</p>
+          <p style={{ color: "blue" , cursor: "pointer"}}>Already have an account? Sign in</p>
         </div>
       </div>
     </div>
