@@ -61,14 +61,15 @@ font-size: 18px;
 
 .signup {
   color: white;
-  background-color: rgb(242, 145, 145);
+  /* background-color: rgb(242, 145, 145); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 30px;
-  max-width: 400px; /* Set a max-width to keep the content centered and limit the width */
-  width: 100%; /* Add this to take full available width */
+  width: 35%;
+  margin-left: 35%;
+  height: 100vh;
   box-sizing: border-box; /* Add this to include padding and border in the width calculation */
 }
 
@@ -88,7 +89,8 @@ font-size: 18px;
   color: white;
   margin-top: 20px;
   font-size: 20px;
-  width: 100%;
+  margin-left: 30%;
+  width: 40%;
   border-radius: 20px;
   background-color: rgb(253, 67, 67);
 }
@@ -96,10 +98,11 @@ font-size: 18px;
 
 .signupInputs img {
   width: 100px;
-  margin: 0 auto; /* Use auto margin to center the image */
+  margin: 0 auto; 
+  
 }
-
 .signupInputs h2 {
+  margin-top: -30px;
   font-size: 40px;
 }
 
