@@ -86,7 +86,9 @@ const Login = () => {
 </div>
 {isLoggedIn && (
   <div style={{ color: "blue" }}>
-    Welcome {username}
+    Welcome 
+    <br />
+      {username}
   </div>
 )}
 </div>
