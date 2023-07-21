@@ -7,6 +7,5 @@ export const store = configureStore({
     movie: movieSlice,
    
   },
-//   middleware: (getDefaultMiddleware) =>
-//   getDefaultMiddleware().concat(pokemonApi.middleware),
+
 });

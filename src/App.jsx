@@ -5,7 +5,7 @@ import Signup from "./Pages/Signup";
 import SignIn from "./Pages/SignIn";
 import Wishlist from "./Pages/Wishlist";
 import { TicketBooking } from "./Pages/TicketBooking";
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 import CheckOut from "./Pages/CheckOut";
 import Home from "./Pages/Home";
 

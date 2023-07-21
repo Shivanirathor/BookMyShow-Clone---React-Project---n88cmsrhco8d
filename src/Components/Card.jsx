@@ -22,7 +22,7 @@ const style = {
 const Card = ({ imgUrl, title, language, rating, overview, releasedate }) => {
   const [openModal, setOpenModal] = useState(false);
   const handleOpen = () => setOpenModal(true);
-  const isUserLoggedIn = true;
+  const isUserLoggedIn = localStorage.getItem("loggedIn") || false;
 
   return (
     <div className="cards" onClick={handleOpen}>
@@ -33,16 +33,18 @@ const Card = ({ imgUrl, title, language, rating, overview, releasedate }) => {
 
       <Modal open={openModal} onClose={() => setOpenModal(false)}>
         <Box sx={style}>
-        {openModal &&   <ModalContent
-            setOpenModal={setOpenModal}
-            imgUrl={imgUrl}
-            title={title}
-            language={language}
-            rating={rating}
-            overview={overview}
-            releasedate={releasedate}
-            isUserLoggedIn={isUserLoggedIn} 
-          /> }
+          {openModal && (
+            <ModalContent
+              setOpenModal={setOpenModal}
+              imgUrl={imgUrl}
+              title={title}
+              language={language}
+              rating={rating}
+              overview={overview}
+              releasedate={releasedate}
+              isUserLoggedIn={isUserLoggedIn}
+            />
+          )}
         </Box>
       </Modal>
     </div>

@@ -4,10 +4,10 @@ import { wishListContext } from "../App";
 
 const Wishlist = () => {
   const { wishListContextValue } = useContext(wishListContext);
+
   return (
     <>
       <div className="wishlistCss">
-
         {wishListContextValue.map((item) => {
           return (
             <div className="modalCards">

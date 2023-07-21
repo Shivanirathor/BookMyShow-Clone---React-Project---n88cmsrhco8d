@@ -52,3 +52,64 @@
     display: block;
   }
   
+/* ======================= */
+
+
+@media screen and (max-width: 600px) {
+    .imageIcon {
+        margin-left: -40px;
+    }
+    .search {
+        display: none !important;
+    }
+    .genresClr,
+    .search input,
+    .modalText {
+        font-size: 12px !important;
+        max-width: 100%;
+    }
+    .genresText:hover {
+        transform: scale(0.80) !important;
+        cursor: pointer;
+    }
+    .modalCards {
+        width: auto !important;
+        max-height: 500px;
+    }
+    .modalCards img {
+        display: none;
+    }
+    .tags1 {
+        font-size: 10px;
+    }
+   
+}
+
+@media screen and (max-width: 900px) {
+    .imageIcon {
+        margin-left: -40px;
+    }
+    .search {
+        width: 350px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .search input {
+        font-size: 12px;
+    }
+    .cards{
+        margin-left: 70px !important;
+        max-width: 500px !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .search {
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+}

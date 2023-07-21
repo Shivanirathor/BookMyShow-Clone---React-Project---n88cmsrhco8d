@@ -16,7 +16,7 @@ export const getMovieList = createAsyncThunk(
 export const getMovieSearch = createAsyncThunk(
   "movie/getMovieSearch",
   async (payload) => {
-    console.log("firstpayload", payload);
+    // console.log("firstpayload", payload);
     const res = await fetch(
       `https://api.themoviedb.org/3/search/movie?query=${payload}`,
       {
@@ -70,6 +70,7 @@ export const movieSlice = createSlice({
     }
 
   },
+  //for calling api
   extraReducers: {
     [getMovieList.fulfilled]: (state, { payload }) => {
       state.movieList = payload.results;
