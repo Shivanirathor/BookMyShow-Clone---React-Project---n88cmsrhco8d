@@ -3,6 +3,7 @@ import Card from "./Card";
 import { getMovieList } from "../Redux/movieSlice";
 import { useDispatch, useSelector } from "react-redux";
 
+
 const Content = () => {
   const dispatch = useDispatch();
   const { movieList, genresId } = useSelector((state) => state.movie);
@@ -13,6 +14,7 @@ const Content = () => {
 
   return (
     <div>
+     
       <h2 style={{ color: "white", fontSize: 40, margin: 8 }}>Now Playing</h2>
       <div
         style={{

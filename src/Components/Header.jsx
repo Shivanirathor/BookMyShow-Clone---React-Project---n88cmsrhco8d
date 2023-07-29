@@ -4,7 +4,8 @@ import Favourite from "../Pages/Favourite";
 import Image from "./Image";
 import Login from "../Pages/Login";
 
-const Header = ({hideSearch}) => {
+
+const Header = () => {
   return (
     <div>
       <div
@@ -15,16 +16,17 @@ const Header = ({hideSearch}) => {
         }}
       >
         <Image />
-       {!hideSearch && <div>
+        <div>
           <Search />
-        </div> }
-        {!hideSearch && <div>
+        </div>
+        <div>
           <Favourite />
-        </div> }
-        {!hideSearch &&  <div style={{ marginRight: "20px" }}>
+        </div>
+        <div style={{ marginRight: "20px" }}>
           <Login />
-        </div>}
+        </div>
       </div>
+    
     </div>
   );
 };

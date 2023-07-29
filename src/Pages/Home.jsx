@@ -3,11 +3,15 @@ import "../Style/MainContent.css";
 import Genres from "../Components/Genres";
 import Content from "../Components/Content";
 import Header from "../Components/Header";
+import CarouselContainer from "../Components/CarouselContainer";
 
 const Home = () => {
   return (
     <div>
       <Header />
+      <div>
+        <CarouselContainer />
+      </div>
       <div style={{ display: "flex" }}>
         <div
           className="genresClr"
@@ -15,6 +19,7 @@ const Home = () => {
         >
           <Genres />
         </div>
+
         <div
           className="contentClr"
           style={{ width: "80%", textAlign: "center" }}

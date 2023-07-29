@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "../Style/Signup.css";
 import lockImg from "../assets/lock.png";
 
+import { signInWithPopup } from "@firebase/auth";
+import { auth, provider } from "../Firebase";
+
 const Signup = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -16,11 +19,11 @@ const Signup = () => {
       alert("Please fill in all the mandatory fields.");
       return;
     }
-      // Check if email contains "@gmail"
-      if (!email.includes("@gmail")) {
-        setEmailError("Please enter a valid email (e.g., yourname@gmail.com)");
-        return;
-      }
+    // Check if email contains "@gmail"
+    if (!email.includes("@gmail")) {
+      setEmailError("Please enter a valid email (e.g., yourname@gmail.com)");
+      return;
+    }
 
     navigate("/login");
     localStorage.setItem("loggedIn", true);
@@ -36,6 +39,20 @@ const Signup = () => {
   };
   const changedPassword = (event) => {
     setPassword(event.target.value);
+  };
+
+  const onLoginClick = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // console.log("result", result);
+        const userName = result.user.displayName;
+        localStorage.setItem("loggedIn", true);
+        localStorage.setItem("name", userName);
+        navigate("/home");
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
   };
 
   return (
@@ -57,7 +74,7 @@ const Signup = () => {
           onChange={changedEmail}
           required
         />
-            {emailError && <p style={{ color: "red" }}>{emailError}</p>}
+        {emailError && <p style={{ color: "red" }}>{emailError}</p>}
         <input
           type="Password"
           placeholder="Password"
@@ -67,8 +84,20 @@ const Signup = () => {
         />
 
         <button onClick={handleRegisterUser}>Register</button>
+
+        <button
+          type="submit"
+          className="loginBttn googleBttn"
+          onClick={onLoginClick}
+        >
+          {/* <img src="" alt="logo" className="googleLogo" /> */}
+          Continue with Google
+        </button>
+
         <div onClick={() => navigate("/login")}>
-          <p style={{ color: "blue" , cursor: "pointer"}}>Already have an account? Sign in</p>
+          <p style={{ color: "blue", cursor: "pointer" }}>
+            Already have an account? Sign in
+          </p>
         </div>
       </div>
     </div>

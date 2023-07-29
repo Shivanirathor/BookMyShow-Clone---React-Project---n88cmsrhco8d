@@ -1,12 +1,24 @@
 import React, { useContext } from "react";
 import "../Style/MainContent.css";
 import { wishListContext } from "../App";
+import Carousel from "react-material-ui-carousel";
 
 const Wishlist = () => {
-  const { wishListContextValue } = useContext(wishListContext);
+  const { wishListContextValue, setWishListContextValue } =
+    useContext(wishListContext);
+
+  const deleteWishlist = () => {
+    setWishListContextValue([]) 
+    if(wishListContext == []){
+
+      console.log("now wishlist is empty!! ");
+    }
+    
+  };
 
   return (
     <>
+    
       <div className="wishlistCss">
         {wishListContextValue.map((item) => {
           return (
@@ -25,7 +37,11 @@ const Wishlist = () => {
             </div>
           );
         })}
+        <div>
+          <button onClick={deleteWishlist}>Delete</button>
+        </div>
       </div>
+     
     </>
   );
 };

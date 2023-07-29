@@ -3,14 +3,15 @@ import { TheaterScreen } from "../Components/TheaterScreen";
 import { TheaterSeats } from "../Components/TheaterSeats";
 import "../Style/TicketBooking.css";
 import { useSelector } from "react-redux";
-import Header from "../Components/Header";
+
 
 const theaterName = ["PVR Cinema", "Metro INOX Cinema", "Cinepolis"];
 const showTime = ["10:15", "12:45", "3:15", "5:45"];
 const theaterSeats = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 export function TicketBooking() {
-  const [date, setDate] = useState(null);
+  const [date, setDate] = useState(new Date());
+
   const { selectedMovieName } = useSelector((state) => state.movie);
 
   const options = (arr, name) => {
@@ -24,18 +25,27 @@ export function TicketBooking() {
   };
 
   const dateOfBooking = (e) => {
+    console.log("e", e);
     setDate(e.target.value);
   };
 
+  function convertDate(inputFormat) {
+    function pad(s) {
+      return s < 10 ? "0" + s : s;
+    }
+    var d = new Date(inputFormat);
+    return [pad(d.getFullYear()), pad(d.getMonth() + 1), d.getDate()].join("-");
+  }
+
   return (
     <div className="book">
-      <Header hideSearch />
+      {/* <Header /> */}
       <h3>Book Ticket</h3>
-      <p>
+      <div>
         <span className="heading">Movie: </span>
 
         <p> {selectedMovieName}</p>
-      </p>
+      </div>
 
       <div className="Booking-nav">
         <div className="border-class">
@@ -44,7 +54,11 @@ export function TicketBooking() {
           </select>
         </div>
         <div className="border-class">
-          <input type="date" onChange={dateOfBooking} />
+          <input
+            type="date"
+            value={convertDate(date)}
+            onChange={dateOfBooking}
+          />
         </div>
         <div className="border-class">
           <select className="select-theater">

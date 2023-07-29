@@ -1,7 +1,7 @@
-import React, {useState } from "react";
-import '../Style/TicketBooking.css';
+import React, { useState } from "react";
+import "../Style/TicketBooking.css";
 
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function TheaterSeats(props) {
   const navigate = useNavigate();
@@ -47,8 +47,9 @@ export function TheaterSeats(props) {
   };
 
   const submitSeatSelected = () => {
-    if (!bookingDate || seatState.length === 0) {
-      alert("Please fill in all the details before submitting.");
+    
+    if (seatState.length === 0) {
+      alert("Please fill the Seats");
       return;
     }
 
@@ -77,12 +78,12 @@ export function TheaterSeats(props) {
         <div className="seat-row">{seatsSection(props.Seats, 8)}</div>
         <div className="seat-row">{seatsSection(props.Seats, 9)}</div>
 
-       
         <button className="btn-seat" onClick={submitSeatSelected}>
           Submit
         </button>
       </div>
-     
     </>
   );
 }
+
+export default TheaterSeats;
