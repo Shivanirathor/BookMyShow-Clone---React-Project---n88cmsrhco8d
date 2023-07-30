@@ -7,7 +7,7 @@ const Favourite = () => {
   const navigate = useNavigate();
   return (
     <div className="favourite">
-      <div onClick={() => navigate("/wishlist")}>
+      <div onClick={() => navigate("/wishlist")} title="Your Added Items.">
         <img src={favouriteImg} alt="img" width={"45px"} height={"45px"} />
       </div>
     </div>

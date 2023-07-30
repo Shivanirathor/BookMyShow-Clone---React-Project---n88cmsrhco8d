@@ -18,7 +18,7 @@ const Login = () => {
 
   return (
     <div className="login">
-      <div className="user-dropdown">
+      <div className="user-dropdown" title="Login">
         <img
           src={userImg}
           alt="img"

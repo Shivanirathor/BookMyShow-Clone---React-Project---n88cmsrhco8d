@@ -5,12 +5,14 @@ import { useNavigate } from "react-router-dom";
 const CarouselItem = ({ item }) => {
   const navigate = useNavigate();
   const imgClick = () => {
-    if (localStorage.setItem("loggedIn", true)) {
+    const loggedIn = localStorage.getItem("loggedIn");
+    if (loggedIn === "true") {
       navigate("/ticketbooking");
     } else {
       navigate("/Signup");
     }
   };
+
   return (
     <Paper style={{ cursor: "pointer" }}>
       <img
