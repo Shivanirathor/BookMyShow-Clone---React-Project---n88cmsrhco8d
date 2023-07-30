@@ -8,9 +8,9 @@ function CheckOut() {
   const ticketDetails = JSON.parse(localStorage.getItem("BookingDetails"));
   const navigate = useNavigate();
   // console.log("ticketsdetails", ticketDetails);
+  
   return (
     <div className="check-out">
-      
       <button
         onClick={() => {
           navigate(-1);
@@ -23,6 +23,7 @@ function CheckOut() {
         <Summary BookingDetails={ticketDetails} />
         <Payment />
       </div>
+     
     </div>
   );
 }

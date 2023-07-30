@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Style/CheckOut.css";
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import StripeCheckout from "react-stripe-checkout";
+import { useNavigate } from "react-router-dom";
 
 function Payment() {
+  const navigate = useNavigate();
+  const [paymentSuccess, setPaymentSuccess] = useState(false);
+
   const HandleSubmit = (event) => {
     event.preventDefault();
   };
+
+  const onToken = (token) => {
+    console.log(token);
+    setPaymentSuccess(true);
+
+    // fetch("/save-stripe-token", {
+    //   method: "POST",
+    //   body: JSON.stringify(token),
+    // }).then((response) => {
+    //   response.json().then((data) => {
+    //     alert(`We are in business, ${data.email}`);
+    //   });
+    // });
+  };
+
+  const closePaymentSuccessModal = () => {
+    setPaymentSuccess(false);
+    navigate("/home");
+  };
+
   return (
     <div className="summary">
       <h2>Payment</h2>
@@ -42,17 +68,39 @@ function Payment() {
             <label htmlFor="exp-date">Expiration</label>
             <input className="inputs" id="exp-date" type="text" />
           </div>
-          <div className="card-name">
+          {/* <div className="card-name">
             <label htmlFor="cvv">CVV</label>
             <input className="inputs" id="cvv" type="text" />
-          </div>
+          </div> */}
         </div>
         <div className="form-checkout">
-          <button className="checkout-btn" type="submit">
+          {/* <button className="checkout-btn" type="submit">
             Proceed to pay
-          </button>
+          </button> */}
+          <StripeCheckout
+            token={onToken}
+            name="Payment Method"
+            currency="Inr"
+            amount={99999}
+            stripeKey="pk_test_51NZVHxSCl6WwwBbXsixTDhJJOzhjUnikFFVBYFp7OrZRIt8O3TKaTn0RXcnZGDdd17JKFKhEdrHjlFevuEcaCXw600lEWtlA08"
+          />
         </div>
       </form>
+      {/* Conditionally render the alert/modal */}
+      {/* {paymentSuccess && showPaymentSuccessAlert()} */}
+      {/* Conditionally show the payment success modal */}
+      {paymentSuccess && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close-btn" onClick={closePaymentSuccessModal}>
+              &times;
+            </span>
+            <p> Payment Successful! <br/> 
+            <CheckBoxIcon className="icon"/>
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

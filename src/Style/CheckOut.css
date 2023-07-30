@@ -126,6 +126,46 @@
         font-weight: 500;
     }
 }
+/*===========for payment ============*/
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fed8d8;
+    color: rgb(26, 26, 252);
+    font-size: 60px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 1px 2px 4px 4px white;
+    width: 30%;
+    height: 50%;
+    text-align: center;
+  }
+  .modal-content .icon{
+    margin-top: 40px;
+    font-size: 60px;
+    color: #fff;
+    background-color: green;
+  }
+  .close-btn {
+    color: red;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 180px;
+    cursor: pointer;
+  }
+  
 
 @media screen and (max-width:900px) {
     .wraper-checkout {
