@@ -61,7 +61,7 @@ const ModalContent = ({
         <div className="tags1">Title:- {title}</div>
         <div>Language:- {language}</div>
         <div>Rating:- ⭐{rating} / 10</div>
-        <div>Overview:- {overview}</div>
+        <div className="overview">Overview:- {overview}</div>
         <div>Release date:-{releasedate}</div>
 
         <div onClick={handleTicketBooking}>

@@ -21,7 +21,7 @@ body{
         display: flex;
         justify-content: center;
         text-align: center;
-        padding: 10px;
+        padding: 30px;
         background: linear-gradient(180deg,  rgb(45, 127, 131), rgb(239, 88, 88));
 }
 .modalText{
