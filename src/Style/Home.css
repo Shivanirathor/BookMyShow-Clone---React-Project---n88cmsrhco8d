@@ -1,3 +1,4 @@
+
 .imageIcon img{
     margin-top: -60px;
     margin-bottom: -80px;
@@ -82,6 +83,17 @@
     .tags1 {
         font-size: 10px;
     }
+  
+    .signupInputs{
+        border-radius: 10px !important;
+        position:absolute;
+        margin-left: -50px !important;
+        width: 60% !important;
+    }
+     .signup button{
+        font-size: 15px !important;
+        width: 100px !important;
+    }
    
 }
 
@@ -102,6 +114,15 @@
         margin-left: 70px !important;
         max-width: 500px !important;
     }
+    .signupInputs{
+        border-radius: 10px !important;
+        position:absolute;
+        width: 60% !important;
+    }
+     button{
+        font-size: 15px !important;
+   
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -110,6 +131,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .signupInputs{
+        border-radius: 10px !important;
+        position:absolute;
+        width: 50% !important;
     }
  
 }
