@@ -1,7 +1,6 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Favourite from "./Pages/Favourite";
-// import Signup from "./Pages/SignUp";
 import SignIn from "./Pages/SignIn";
 import Wishlist from "./Pages/Wishlist";
 import { TicketBooking } from "./Pages/TicketBooking";
@@ -9,7 +8,6 @@ import { createContext, useState } from "react";
 import CheckOut from "./Pages/CheckOut";
 import Home from "./Pages/Home";
 import Signup from "./Pages/Signup";
-import Test from "./Pages/Test";
 
 const router = createBrowserRouter([
   {
@@ -43,10 +41,6 @@ const router = createBrowserRouter([
   {
     path: "checkout",
     element: <CheckOut />,
-  },
-  {
-    path: "carousel",
-    element: <Test />,
   },
 ]);
 export const wishListContext = createContext();

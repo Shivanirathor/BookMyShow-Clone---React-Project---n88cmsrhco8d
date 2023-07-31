@@ -28,7 +28,7 @@ function Payment() {
 
   const closePaymentSuccessModal = () => {
     setPaymentSuccess(false);
-    navigate("/home");
+    navigate("/");
   };
 
   return (
@@ -86,9 +86,7 @@ function Payment() {
           />
         </div>
       </form>
-      {/* Conditionally render the alert/modal */}
-      {/* {paymentSuccess && showPaymentSuccessAlert()} */}
-      {/* Conditionally show the payment success modal */}
+      
       {paymentSuccess && (
         <div className="modal">
           <div className="modal-content">

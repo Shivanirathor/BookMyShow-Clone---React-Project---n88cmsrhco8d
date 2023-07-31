@@ -52,3 +52,17 @@
   width: 100%; /* Add this to take full available width */
   box-sizing: border-box; /* Add this to include padding and border in the width calculation */
 }
+.loginBttn{
+  background-color: white !important;
+  color: black !important;
+  width: 300px !important;
+  margin-left: 60px !important;
+  text-align: end;
+}
+.googleBttn img{
+  position: absolute;
+  margin-left: -60px;
+  width: 30px;
+  height: 30px;
+ 
+}

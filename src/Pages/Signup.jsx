@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Style/Signup.css";
 import lockImg from "../assets/lock.png";
-
+import googleLogo from "../assets/Google.jpeg";
 import { signInWithPopup } from "@firebase/auth";
 import { auth, provider } from "../Firebase";
 
@@ -90,10 +90,9 @@ const Signup = () => {
           className="loginBttn googleBttn"
           onClick={onLoginClick}
         >
-          {/* <img src="" alt="logo" className="googleLogo" /> */}
+          <img src={googleLogo} alt="logo" />
           Continue with Google
         </button>
-
         <div onClick={() => navigate("/login")}>
           <p style={{ color: "blue", cursor: "pointer" }}>
             Already have an account? Sign in
