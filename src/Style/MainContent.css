@@ -9,12 +9,13 @@ body{
         justify-content: "space-between";
 }
 .genresClr{
+        font-size: 18px;
         background-color:rgb(31, 37, 51);
         color: white;
 }
 
 .genresText:hover{
-        transform: scale(1.70);
+        transform: scale(1.50);
         cursor: pointer;    
 }
 .modalCards{

@@ -12,7 +12,7 @@ const Genres = () => {
 
   return (
     <div>
-      <h2>Genres</h2>
+      <h2 style={{fontSize:40}}>Genres</h2>
       {genresType.map((data) => {
         return (
           <p

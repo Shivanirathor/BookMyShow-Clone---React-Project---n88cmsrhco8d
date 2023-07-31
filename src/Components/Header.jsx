@@ -13,6 +13,7 @@ const Header = () => {
           background: "rgb(51, 53, 69)",
           display: "flex",
           justifyContent: "space-between",
+          height:"90px",
         }}
       >
         <Image />
