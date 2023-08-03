@@ -58,6 +58,10 @@
     .search {
         display: none;
     }
+    .favourite img{
+        margin-left: 250px;
+    }
+    
     .genresClr{
         display: none;
     }
