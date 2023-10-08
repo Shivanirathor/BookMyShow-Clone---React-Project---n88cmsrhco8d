@@ -20,10 +20,7 @@ const Home = () => {
           <Genres />
         </div>
 
-        <div
-          className="contentClr"
-          style={{ width: "80%", textAlign: "center" }}
-        >
+        <div style={{ width: "100%", textAlign: "center" }}>
           <Content />
         </div>
       </div>

@@ -1,69 +1,75 @@
-body{
-        margin: 0;
-        padding: 0;
-        background-image: linear-gradient(180deg, rgb(62, 64, 75), rgb(165, 169, 178));
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    180deg,
+    rgb(62, 64, 75),
+    rgb(165, 169, 178)
+  );
 }
-.header{
-        background-color: "rgb(51, 53, 69)";
-        display: "flex";
-        justify-content: "space-between";
+.header {
+  background-color: "rgb(51, 53, 69)";
+  display: "flex";
+  justify-content: "space-between";
 }
-.genresClr{
-        font-size: 18px;
-        background-color:rgb(31, 37, 51);
-        color: white;
-}
-
-.genresText:hover{
-        transform: scale(1.50);
-        cursor: pointer;    
-}
-.modalCards{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        padding: 30px;
-        background: linear-gradient(180deg,  rgb(45, 127, 131), rgb(239, 88, 88));
-}
-.modalText{
-        font-weight: "bold";
-       text-align: center;
-        font-size: 15px;
-        margin-left: 30px;
-}
-.modalText button{
-        color: white;
-        background: rgb(45, 127, 131);
-       margin: 5px;
+.genresClr {
+  margin-top: -32px;
+  font-size: 18px;
+  background-color: rgb(31, 37, 51);
+  color: white;
 }
 
-.modalCards:hover{
-        background: linear-gradient(180deg, rgb(227, 44, 44), rgb(20, 91, 95));
-        box-shadow:  0 0 10px 5px #fff;
+.genresText:hover {
+  transform: scale(1.5);
+  cursor: pointer;
 }
-.modalText button:hover{
-        background: rgb(227, 44, 44);
-        transform: scale(1.08);
+.modalCards {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(180deg, rgb(45, 127, 131), rgb(239, 88, 88));
 }
-.cards{
-        color: black;
-        margin: 20px;
-        background: rgb(249, 244, 244);
-        margin-top: 20px;
-        border-radius: 20px;
-        box-shadow: 1px 1px 5px 3px rgb(31, 37, 51)
+.modalText {
+  font-weight: "bold";
+  text-align: center;
+  font-size: 15px;
+  margin-left: 30px;
 }
-.cards:hover{
-        transform: scale(0.95) ;
-}
-
-.cards img{
-       margin-bottom: 15px;
-        border-radius: 10px;
-        
+.modalText button {
+  color: white;
+  background: rgb(45, 127, 131);
+  margin: 5px;
 }
 
-.tags1{
-        font-size: 30px;
-        font-weight:600;
+.modalCards:hover {
+  background: linear-gradient(180deg, rgb(227, 44, 44), rgb(20, 91, 95));
+  box-shadow: 0 0 10px 5px #fff;
+}
+.modalText button:hover {
+  background: rgb(227, 44, 44);
+  transform: scale(1.08);
+}
+.cards {
+  width: 90%;
+  height: 94%;
+  color: black;
+  margin: 20px;
+  background: rgb(249, 244, 244);
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 3px rgb(31, 37, 51);
+  transition: 1s ease-out;
+}
+.cards:hover {
+  transform: scale(1.05);
+}
+
+.cards img {
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.tags1 {
+  font-size: 30px;
+  font-weight: 600;
 }

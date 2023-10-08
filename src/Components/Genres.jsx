@@ -11,7 +11,7 @@ const Genres = () => {
   }, []);
 
   return (
-    <div>
+    <div className="mobile_genres">
       <h2 style={{fontSize:40}}>Genres</h2>
       {genresType.map((data) => {
         return (

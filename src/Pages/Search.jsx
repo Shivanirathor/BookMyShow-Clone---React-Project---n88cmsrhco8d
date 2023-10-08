@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../Style/Home.css";
 import { getMovieSearch } from "../Redux/movieSlice";
 import { useDispatch } from "react-redux";
+import SearchIcon from "@mui/icons-material/Search";
 const Search = () => {
   const dispatch = useDispatch();
   const [searchInput, setSearchInput] = useState("");
@@ -21,7 +22,11 @@ const Search = () => {
         value={searchInput}
         onChange={handleChange}
       />
-      <button onClick={dispatchMovieList}>Search</button>
+      <SearchIcon
+        title="Search"
+        onClick={dispatchMovieList}
+        className="searchIcon"
+      />
     </div>
   );
 };

@@ -23,7 +23,7 @@ const Header = () => {
         <div>
           <Favourite />
         </div>
-        <div style={{ marginRight: "20px" }}>
+        <div className="mobile_menu">
           <Login />
         </div>
       </div>

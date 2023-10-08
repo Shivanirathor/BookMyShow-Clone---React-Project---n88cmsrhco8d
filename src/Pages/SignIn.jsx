@@ -8,7 +8,6 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
 
   const handleUser = () => {
-   
     const nameLocalStorage = localStorage.getItem("name");
     const passwordLocalStorage = localStorage.getItem("password");
 
@@ -47,6 +46,7 @@ const SignIn = () => {
         />
 
         <button onClick={handleUser}>Login</button>
+        <p></p>
       </div>
     </div>
   );

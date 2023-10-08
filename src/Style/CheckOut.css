@@ -1,7 +1,10 @@
 .summary {
     border: 1px solid black;
-    box-shadow: 3px 4px 3px white;
-    height: max-content;
+    box-shadow: 0 0 10px white;
+   display: flex;
+   flex-direction: column;
+   padding: 20px 40px;
+   font-size: 20px;
 }
 
 .eachTicket {
@@ -13,11 +16,7 @@
     margin: 10px;
 }
 
-.card-name {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
+
 
 .wraper-checkout {
     display: flex;
@@ -34,33 +33,43 @@
     height: 100vh;
 }
 
-.input-fields {
-    margin: 5px;
-}
-
-.input-fields > label {
-    margin: 5px;
-}
-
-.user-name-email {
+.form-container {
     display: flex;
-}
-
-.input1 {
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto; 
+  
+  }
+  
+  .input-fields {
+    margin-bottom: 20px;
+  }
+  
+  .input1 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    margin-bottom: 5px;
+  }
+  
+  .inputs {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .payment-method {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .radio-input {
     display: flex;
     align-items: center;
-}
-
-.input1 > label {
-    margin: 5px;
-}
-
-.inputs {
-  
-    border-radius: 2px;
-    margin: 10px 0;
-    height: 1.5rem;
-}
+  }
 
 .checkout-btn {
     display: flex;

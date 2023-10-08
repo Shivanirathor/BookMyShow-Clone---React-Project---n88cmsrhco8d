@@ -2,6 +2,9 @@ import React from "react";
 import "../Style/CheckOut.css";
 import { useSelector } from "react-redux";
 
+const calculateTotalTicketPrice = (BookingDetails) => {
+  return Number(BookingDetails.price) * Number(BookingDetails.noSeats);
+};
 function Summary(props) {
   const { selectedMovieName } = useSelector((state) => state.movie);
   const totalTicketPrice =
@@ -45,3 +48,4 @@ function Summary(props) {
   );
 }
 export default Summary;
+export { calculateTotalTicketPrice };

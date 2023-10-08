@@ -1,3 +1,8 @@
+.login {
+  position: relative;
+  right: 50px;
+  top: 30px;
+}
 
 .signup {
   color: white;
@@ -10,9 +15,8 @@
   width: 35%;
   margin-left: 35%;
   height: 100vh;
-  box-sizing: border-box; /* Add this to include padding and border in the width calculation */
+  box-sizing: border-box;
 }
-
 
 .signupInputs {
   display: flex;
@@ -22,24 +26,19 @@
   gap: 20px;
   background-color: rgb(59, 189, 189);
   padding: 30px;
-  width: 100%; /* Add this to take full available width */
-  box-sizing: border-box; /* Add this to include padding and border in the width calculation */
+  width: 100%;
+  box-sizing: border-box;
 }
 .signup button {
   color: white;
-  margin-top: 20px;
   font-size: 20px;
-  margin-left: 30%;
-  width: 40%;
   border-radius: 20px;
   background-color: rgb(253, 67, 67);
 }
 
-
 .signupInputs img {
   width: 100px;
-  margin: 0 auto; 
-  
+  margin: 0 auto;
 }
 .signupInputs h2 {
   margin-top: -30px;
@@ -49,20 +48,12 @@
 .signupInputs input {
   height: 30px;
   font-size: 18px;
-  width: 100%; /* Add this to take full available width */
-  box-sizing: border-box; /* Add this to include padding and border in the width calculation */
+  width: 100%;
+  box-sizing: border-box;
 }
-.loginBttn{
-  background-color: white !important;
-  color: black !important;
-  width: 300px !important;
-  margin-left: 60px !important;
-  text-align: end;
-}
-.googleBttn img{
-  position: absolute;
-  margin-left: -60px;
-  width: 30px;
-  height: 30px;
- 
+
+.googleBttn  {
+display: flex;
+justify-content: center;
+gap: 10px;
 }

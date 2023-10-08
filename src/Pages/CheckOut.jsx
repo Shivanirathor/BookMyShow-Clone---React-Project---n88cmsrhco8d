@@ -1,14 +1,12 @@
 import React from "react";
-import Summary from "../Components/Summary";
 import { useNavigate } from "react-router-dom";
+import Summary, { calculateTotalTicketPrice } from "../Components/Summary";
 import Payment from "../Components/Payment";
-
 
 function CheckOut() {
   const ticketDetails = JSON.parse(localStorage.getItem("BookingDetails"));
   const navigate = useNavigate();
-  // console.log("ticketsdetails", ticketDetails);
-  
+  const totalTicketPrice = calculateTotalTicketPrice(ticketDetails);
   return (
     <div className="check-out">
       <button
@@ -21,9 +19,9 @@ function CheckOut() {
       <h1 className="checkout-heading">Checkout</h1>
       <div className="wraper-checkout">
         <Summary BookingDetails={ticketDetails} />
-        <Payment />
+
+        <Payment totalTicketPrice={totalTicketPrice} />
       </div>
-     
     </div>
   );
 }

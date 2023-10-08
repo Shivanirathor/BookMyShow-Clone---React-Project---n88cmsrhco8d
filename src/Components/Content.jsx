@@ -13,11 +13,13 @@ const Content = () => {
   }, []);
 
   return (
-    <div>
+    <div >
      
-      <h2 style={{ color: "white", fontSize: 40, margin: 8 }}>Now Playing</h2>
+      <h2 style={{ color: "white", fontSize: 40}}>Now Playing</h2>
       <div
         style={{
+          width:"100%",
+          textAlign:"center",
           cursor: "pointer",
           color: "white",
           display: "grid",

@@ -7,67 +7,65 @@
     height: 200px;
 
 }
-.search{
-         display: "flex";
-        justify-content: "space-evenly"; 
-}
-.search input{
+
+.search {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .searchIcon{
+    position:absolute;
+    cursor: pointer;
+right: 41rem;
+color: rgb(92, 88, 88);
+  
+  }
+  .search input {
     font-size: 17px;
     width: 600px;
     margin-top: 20px;
     height: 35px;
     margin: 20px;
     border-radius: 5px;
-}
+  }
 .favourite{
-   
     margin-top: 20px;
 }
 .favourite:hover{
     box-shadow: 0 0 6px 3px white;
 }
 
-.login img{
-    cursor: pointer;
-    margin-top: 30px; 
-    margin-left: 20px;
-    margin-bottom: -7px;
-}
-.user-dropdown {
-    position: relative;
-  }
-  
-  .user-dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .user-dropdown-menu.show {
-    display: block;
-  }
-  
-/* ======================= */
-/* Mobile Devices (up to 600px) */
 @media screen and (max-width: 600px) {
-    .search {
-        display: none;
+    .imageIcon img{
+        position: absolute;
+        width: 220px;
+        height: 150px;
+        margin-left: -38px;
+        margin-top: -30px;
+
     }
-    .favourite img{
-        margin-left: 250px;
+    .search input {
+        width: 250px;
+       font-size: 12px;
+       font-weight: bold;
+    margin-left: 130px;
     }
-    
+    .searchIcon{
+        position: absolute;
+        right: 160px;
+        color: white;
+        
+    }
+    .favourite{
+        margin-right: 50px;
+    }
+  
     .genresClr{
         display: none;
     }
-    .cards{
-        width: 400px ;
-    }
+ 
     .modalText {
         font-size: 12px !important;
         max-width: 100%;
@@ -97,28 +95,38 @@
         width: 220px !important;
         margin-left: 30px !important;
     }
-    .loginBttn img{
-        margin-top: -3px !important;
-        margin-left: -40px !important;
-    }
+ 
     .modal-content {
         width: 90% !important;
     }
    
 }
 
-/* Tablet Devices (601px to 900px) */
 @media screen and (min-width: 601px) and (max-width: 900px) {
    
-    .search {
-        width: 350px !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 150px;
-    }
+ 
     .search input {
-        font-size: 12px;
+        width: 300px;
+       font-size: 12px;
+       font-weight: bold;
+    margin-left: 150px;
+    }
+    .searchIcon{
+        position: absolute;
+        right: 210px;
+        color: white;
+        
+    }
+    .favourite{
+        margin-right: 10px;
+    }
+    .mobile_genres h2 {
+        font-size: 16px !important;
+    }
+    .genresClr{
+       margin-top: -32px;
+        font-size: 13px !important;
+        display: block;
     }
     .modalCards {
         display: flex;
@@ -130,10 +138,7 @@
     .modalText .overview {
         display: none !important;
     }
-    .cards {
-        margin-left: 70px !important;
-        max-width: 500px !important;
-    }
+   
     .signupInputs {
         border-radius: 10px !important;
         position: absolute;
@@ -148,13 +153,18 @@
     }
 }
 
-/* Laptop Devices (901px to 1200px) */
 @media screen and (min-width: 901px) and (max-width: 1200px) {
-    .search {
+  
+    .search input {
         width: 500px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+       font-size: 12px;
+       font-weight: bold;
+    margin-left: 150px;
+    }
+    .searchIcon{
+       right: 220px;
+       
+        
     }
     .signupInputs {
         border-radius: 10px !important;
@@ -167,10 +177,4 @@
     .close-btn {
         right: 50px;
     }
-}
-
-/* Larger Screens (1201px and above) */
-/* You can add additional styles for larger screens if needed */
-@media screen and (min-width: 1201px) {
-    /* Add your styles for larger screens here */
 }
